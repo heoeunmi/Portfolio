@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+#main_bg {width: 100%;height: 700px; background: url(../img/sub/about/main_bg1.jpg) no-repeat center/cover; position: relative; top: 0;left: 0;}
+
+#main_bg .bg_txt {position: absolute; top: 50%;left: 50%;transform: translate(-50%,-50%); color: #fff; text-align: center; width: 100%;}
+#main_bg .bg_txt h2 {font-size: 8rem; font-weight: 700; font-family: var(--en-font); padding: 0 0 50px;}
+
+#main_bg .bg_gnb img {display: block; }
+
+#main_bg .bg_txt nav .bg_gnb {display: flex; gap: 60px; flex-wrap: wrap; font-size: 2rem;  justify-content: center;}
+#main_bg .bg_txt nav .bg_gnb > li {display: block; text-align: center; height: 24px; position: relative;}
+
+#main_bg .bg_txt nav .bg_gnb > li:nth-of-type(1):after {content: ""; display: block; background: url(../img/sub/about/right.png)no-repeat center; height: 24px;}
+#main_bg .bg_txt nav .bg_gnb > li:nth-of-type(2):after {content: ""; display: block; background: url(../img/sub/about/right.png)no-repeat center; height: 24px;}
+
+#main_bg .bg_txt nav .bg_gnb > li a {width: 100%;height: 100%;display: block;}
+#main_bg .bg_txt nav .bg_gnb > li a img {width: 24px;height: 24px; object-fit: cover;}
+#main_bg .bg_txt nav .bg_gnb > li::after {position: absolute; top: 3px; right: -40px; width: 24px;}
+
+#main_bg .bg_txt nav .bg_gnb > li:nth-of-type(3) {cursor: pointer;}
+#main_bg .bg_txt nav .bg_gnb  .bread {position: absolute; top: 25px; left: 50%; transform: translateX(-50%); backdrop-filter: blur(10px); width: 200%;  padding: 20px;}
+#main_bg .bg_txt nav .bg_gnb  .bread li a {display: block; color: #fff;  padding: 5px 0; font-size: 1.6rem; transition: all 0.5s; font-weight: 300; }
+
+#main_bg .bg_txt nav .bg_gnb  .bread li:hover a {font-weight: 600;}
+
+#main_bg .bg_gnb li  .bread_main {display: flex; gap: 20px; align-items: center;}
+
+
+#main_bg .bg_txt nav .bg_gnb li i.active::before{transform:rotate(180deg) ;}
+
+@media(max-width:1200px) {
+    #main_bg {height: 500px;}
+    #main_bg .bg_txt h2 {font-size: 5rem; padding: 0 0 30px;}
+    #main_bg nav {display: block;}
+}
+
+@media(max-width:768px) {
+    #main_bg {height: 400px;}
+    #main_bg .bg_txt h2 {font-size: 3rem; padding: 0 0 20px;}
+    #main_bg nav {display: block;}
+    #main_bg .bg_txt nav .bg_gnb > li {height: 16px;}
+    #main_bg .bg_txt nav .bg_gnb > li {font-size: 1.4rem;}
+
+    #main_bg .bg_txt nav .bg_gnb > li{position: relative;}
+    #main_bg .bg_txt nav .bg_gnb > li::after { position: absolute; top: 60%;left: 120%;transform: translatey(-50%);}
+    #main_bg .bg_txt nav .bg_gnb > li:nth-of-type(1):after {height: 12px;}
+    #main_bg .bg_txt nav .bg_gnb > li:nth-of-type(2):after {height: 12px;}
+    #main_bg .bg_txt nav .bg_gnb > li a img {width: 20px; height: 16px; object-fit: cover;}
+
+
+    #main_bg .bg_txt nav .bg_gnb  .bread li a {display: block; font-size: 1.4rem; padding: 0 ;}
+
+    #main_bg .bg_txt nav .bg_gnb { gap: 40px; }
+    
+}
+
+@media(max-width:320px) {
+    #main_bg .bg_txt h2 {font-size: 2rem; padding: 0 0 20px;}
+    #main_bg .bg_txt nav .bg_gnb { gap: 20px; }
+    #main_bg .bg_txt nav .bg_gnb > li {width: 100%; margin: 0 auto; position: relative;}
+
+    #main_bg .bg_txt nav .bg_gnb > li a img {  margin: 0 auto;}
+    #main_bg .bg_gnb li  .bread_main {position: absolute; top: 50%;left: 50%; transform: translate(-50%,-50%); gap: 10px;}
+    #main_bg .bg_txt nav .bg_gnb > li {height: 16px;}
+    #main_bg .bg_txt nav .bg_gnb > li:nth-of-type(1):after {height: 16px;}
+    #main_bg .bg_txt nav .bg_gnb > li:nth-of-type(1):after {display: none;}
+#main_bg .bg_txt nav .bg_gnb > li:nth-of-type(2):after {display: none;}
+}
+ 
+/* about */
+#about {padding: 250px 0 150px;}
+#about .inner {max-width: 100%; padding: 0 7%;}
+#about h2 {font-size: 5rem; font-weight: 700; text-align: center; padding: 0 0 30px;}
+#about h2+p {font-size: 2rem; text-align: center; padding: 0 0 150px;}
+
+#about .about_item li {display: flex; gap:200px; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;}
+#about .about_item li .about_txt {width: calc(100% - 800px);}
+#about .about_item li .about_img {width: 600px;}
+#about .about_item li .about_img img {display: block; width: 100%;;height: 100%;}
+#about .about_item li:nth-child(2) {padding: 200px 0;}
+
+
+#about .about_item li .about_txt h4 {font-size: 2rem;font-weight: 700; font-family: var(--en-font); letter-spacing: -1px;}
+#about .about_item li .about_txt h4::after{content: "";width: 80%;height: 2px;background: var(--main-color); display: block;}
+#about .about_item li .about_txt h3 {padding: 30px 0 50px; font-size: 5rem;font-weight: 700;}
+#about .about_item li .about_txt p {color: #999; font-size: 2rem; }
+
+@media(max-width:1200px) {
+    #about {padding: 150px 0 100px;} 
+    #about h2+p { padding: 0 0 100px;}
+    #about .inner {padding: 0 5%; max-width: 100%;}
+    #about .about_item li  {gap: 100px;}
+    #about .about_item li .about_txt {width: calc(100% - 500px); }
+    #about .about_item li .about_img {width: 400px; margin: 0 auto; }
+    #about .about_item li:nth-child(2) {padding: 100px 0;}
+    #about .about_item li .about_txt h4::after{width: 100%;}
+}
+
+
+@media(max-width:768px) {
+    #about {padding: 100px 0 50px;} 
+    #about h2 {font-size: 3rem;  padding: 0 0 20px;}
+    #about h2+p { padding: 0 0 50px; font-size: 1.6rem; }
+    #about .about_item li  {gap: 30px;}
+    #about .about_item li .about_txt {width: 100%; }
+    #about .about_item li .about_txt h4 {font-size: 1.6rem; }
+    #about .about_item li .about_txt h3 {font-size: 3rem; padding: 20px 0;}
+    #about .about_item li .about_txt p {font-size: 1.6rem;}
+    #about .about_item li .about_img {transform: scale(0.8);  margin: 0 auto;}
+    #about .about_item li:nth-child(2) {padding: 20px 0;}
+}
+
+@media(max-width:320px) {
+    #about {padding: 50px 0 20px;} 
+    #about h2 {font-size: 2.4rem;  padding: 0 0 10px;}
+    #about h2+p { padding: 0 0 30px; font-size: 1.4rem; }
+    #about .about_item li  {gap: 20px;}
+    #about .about_item li .about_txt {width: 100%; }
+    #about .about_item li .about_txt h4 {font-size: 1.4rem; }
+    #about .about_item li .about_txt h3 {font-size: 2rem; padding: 15px 0;}
+    #about .about_item li .about_txt p {font-size: 1.4rem;}
+    #about .about_item li .about_img {transform: scale(0.7);  margin: 0 auto;}
+    #about .about_item li:nth-child(2) {padding: 15px 0;}
+}
+

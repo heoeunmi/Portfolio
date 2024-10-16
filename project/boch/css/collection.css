@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+#main_bg {background: url(../img/sub/collection/home3.jpg)no-repeat center/cover;}
+
+#collection {padding: 150px 0 200px; font-family: var(--en-font);}
+#collection .inner {padding: 0 5%;}
+#collection h2 {font-weight: 700; font-size: 5rem; text-align: center; padding: 0 0 100px;}
+
+
+#collection .collection_best {width: 100%;}
+#collection .best {display: flex;gap: 20px; flex-wrap: wrap;}
+#collection .best dl {width: calc((100% - 60px) / 4);}
+#collection .best dl dt {width: 100%;}
+#collection .best dl dt img {display: block; width: 100%;}
+#collection .best dl dd {font-weight: 500; font-size: 2rem; text-align: center; padding: 20px 0 0;}
+
+
+#collection .collection_new {padding: 200px 0;}
+
+#collection .new {display: flex; gap: 20px; flex-wrap: wrap;}
+#collection .new dl {width: calc((100% - 60px) / 4);}
+#collection .new dl dt {width: 100%;}
+#collection .new dl dt img {display: block; width: 100%;}
+#collection .new dl dd {font-weight: 500; font-size: 2rem; text-align: center; padding: 20px 0 0;}
+
+
+#collection .collection_signature p {font-size: 2rem; font-family: var(--main-font); text-align: center; padding: 30px 0 50px;}
+
+#collection .signature {display: flex; gap:100px 20px; flex-wrap: wrap;}
+#collection .signature dl {width: calc((100% - 60px) / 4);}
+#collection .signature dl dt {width: 100%;}
+#collection .signature dl dt img {display: block; width: 100%;}
+#collection .signature dl dd {font-weight: 500; font-size: 2rem; text-align: center; padding: 20px 0 0;}
+
+
+#collection .collection_like {padding: 200px 0 0;}
+#collection .collection_like p {font-size: 2rem; font-family: var(--main-font); text-align: center; padding: 30px 0 50px;}
+
+#collection .like {display: flex; gap:100px 20px; flex-wrap: wrap;}
+#collection .like  dl {width: calc((100% - 60px) / 4);}
+#collection .like dl dt {width: 100%;}
+#collection .like dl dt img {display: block; width: 100%;}
+#collection .like  dl dd {font-weight: 500; font-size: 2rem; text-align: center; padding: 20px 0 0;}
+
+
+#collection .collection_signature h2, #collection .collection_like h2 {padding: 0 ;}
+
+@media(max-width:1200px) {
+    #collection {padding: 100px 0 150px; }
+    #collection .inner {max-width: 100%; padding: 0 5%; margin: 0 auto;}
+    #collection h2 {padding: 0 0 50px;}
+
+    #collection .collection_new {padding: 150px 0;}
+    #collection .collection_like {padding: 150px 0 0;}
+}
+
+@media(max-width:768px) {
+    #collection {padding: 100px 0; }
+    #collection h2 {font-size: 3rem; padding: 0 0 30px;}
+ 
+
+    #collection .collection_new {padding: 100px 0;}
+    #collection .collection_like {padding: 100px 0 0;}
+
+    #collection .best {gap: 50px 20px;}
+    #collection .new {gap: 50px 20px;}
+    #collection .signature {gap: 50px 20px;}
+    #collection .like {gap: 50px 20px;}
+
+    #collection .new dl {width: calc((100% - 20px) / 2);}
+    #collection .best dl {width: calc((100% - 20px) / 2);}
+    #collection .signature dl {width: calc((100% - 20px) / 2);}
+    #collection .like  dl {width: calc((100% - 20px) / 2);}
+
+
+    #collection .best dl dd , #collection .new dl dd ,#collection .signature  dl dd , #collection .like dl dd {padding: 5px 0 0;}
+
+
+    #collection .collection_signature p , #collection .collection_like p {font-size: 1.6rem; padding: 15px 0 30px;}
+}
+
+@media(max-width:320px) {
+    #collection {padding:50px 0; }
+    #collection h2 {font-size: 2rem; padding: 0 0 20px;}
+
+    #collection .collection_signature p , #collection .collection_like p {display: none;}
+
+    #collection .best dl dd , #collection .new dl dd ,#collection .signature  dl dd , #collection .like dl dd { font-size: 1.6rem;}
+
+}
