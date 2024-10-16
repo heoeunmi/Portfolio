@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+body { font-size: 1.5rem; color: #333; line-height: 1.5; font-family:'pretendard',sans-serif; overflow-x: hidden;}
+::selection {color: #fff;background: #000}
+:root {
+    --mainFont: 'pretendard', sans-serif;
+    --mainColor: #0B1E33;
+}
+
+.press .inner { width: 1700px; padding: 0 5%;}
+
+
+/* 서브페이지 상단 사이트맵 공통 부분 시작 */
+/* 서브 mv 영역 */
+#container { position: relative;}
+#container .sub_visual {height: 460px; width: 100%;  position: relative; backdrop-filter: brightness(30%); }
+#container .sub_visual .sv_bg { filter: brightness(50%); height: 100%;}
+#container .sub_visual img { object-fit: cover; width: 100%; height: 100%; display: block;}
+#container .sub_visual h2 { color: #fff; font-size: 5rem; text-align: center; position: absolute; left: 50%; top: 60%; transform: translate(-50%,-50%);}
+
+/* sub btn 영역 */
+.bread_wrap {  position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 1300px; height: 74px; background: #fff;z-index: 99; }
+.bread_btn { display: flex;  padding-top: 25px; text-align: center; align-items: center; position: relative;}
+.bread_btn > div { border-right: 1px solid #eee; padding-left: 15px;}
+.bread_btn > div:last-child { border: none;}
+.bread_btn button i { font-size: 2rem;}
+.bread_btn button { display: inline-block;  font-size: 1.7rem; color: #333; background: #fff; cursor: pointer; border: none;  font-family:var(--mainFont);}
+.bread_btn .btn1 { width: 80px; }
+.bread_btn .btn2 { cursor: pointer; display: flex; justify-content: space-between; width: 250px; padding-right: 30px; position: relative; z-index: 99; }
+.bread_btn .btn2 i { font-size: 1.3rem;}
+.bread_btn .btn3 { cursor: pointer; display: flex; justify-content: space-between; width: 250px; position: relative;}
+.bread_btn .btn3 i { font-size: 1.3rem;  }
+.bread_btn i.active::before {transform: rotate(180deg);}
+
+/* sub gnb 영역 */
+.bread_gnb1 { position: absolute; left: 0; top: 45px; width: 100%; border: 1px solid #eee; padding: 10px 15px; background: #fff; }
+.bread_gnb1 > li > a { display: block; background: #fff;  text-align: left; padding: 5px 0; transition: all 0.3s; color: #888888; font-size: 1.5rem;}
+.bread_gnb1 > li > a:hover { color: var(--mainColor); font-weight: 600;}
+
+.bread_gnb2 {z-index: 5; position: absolute; left: 0; top: 45px; width: 100%; border: 1px solid #eee; padding: 10px 15px; background: #fff;}
+.bread_gnb2 > li > a { display: block; background: #fff;  text-align: left; padding: 5px 0; transition: all 0.3s; color: #888888; font-size: 1.5rem;}
+.bread_gnb2 > li > a:hover { color: var(--mainColor); font-weight: 600;}
+
+@media (max-width:1400px) {
+    .bread_wrap { width: 100%;}
+    #container .sub_visual h2 { font-size: 4rem;}
+}
+
+@media (max-width:1030px) {
+    .bread_btn {padding-top: 20px;}
+    .bread_wrap { height: 60px;}
+    .bread_btn .btn1 { display: none;}  
+    .bread_btn .btn2 { width: calc(100%/2);}
+    .bread_btn .btn3 { width: calc(100%/2); padding-right: 20px;}
+    .bread_gnb1 { top: 35px; font-size: 1.5rem;}
+    .bread_gnb2 { top: 35px; font-size: 1.5rem;}
+    .bread_btn button { font-size: 1.5rem;}
+}
+/* 서브페이지 상단 사이트맵 공통 부분 종료 */
+
+/* 검색 / 페이지 부분 */
+/* 검색 */
+#content fieldset {display: flex; gap: 20px; justify-content: right;}
+select {font-family: var(--main-font); font-size: 1.5rem; padding: 0 10px; font-weight: 300; }
+.search { padding: 0 5%;}
+.search_txt {border-bottom: 1px solid rgb(51, 51, 51,0.6);  display: flex; align-items: center; padding: 5px 5px;}
+input[type="text"] {font-family: var(--main-font); font-size: 1.5rem; padding: 0 50px 0 0; color:#333; font-weight: 300; outline: none;}
+ .search_txt i {font-size: 2rem; color: #333; cursor: pointer; }
+
+
+/* 페이지 */
+.page {display: flex; justify-content: center; padding: 50px 0 0 ; align-items: center;}
+.page li{position: relative;}
+.page li a {display: block; font-size: 2rem; font-weight: 500; padding: 0 5px;}
+.page li a i {font-size: 1.8rem;}
+.page .num::after {content: ""; background: var(--mainColor); width: 35px; height: 35px; border-radius: 50px; display: block;  position: absolute; top: 50%;left: 50%; transform: translate(-50%,-50%); z-index: -1;}
+.page .num a {color: #fff; padding: 0 30px; font-size: 1.5rem;}
+
+
+/* 보도자료 content 시작 */
+#content { padding: 150px 0;}
+#content .inner { max-width: 1700px; padding: 0 5%;}
+#content .news { padding-top: 50px;}
+#content .news_list li { display: flex; align-items: center; border-top: 1px solid #CCCCCC; padding: 40px 0; position: relative; flex-wrap: wrap; cursor: pointer;}
+#content .news_list li::after { content: ""; display: block; position: absolute; width: 0; height: 1px; background: #004E81; left: 0; top: 0;  transition: all 0.5s;}
+#content .news_list li:hover::after { width: 100%;}
+#content .news_list li:hover dl dt { color: #004E81;}
+#content .news_list li:last-child { border-bottom: 1px solid #ccc;}
+#content .news_list li .news_img { width: 400px; height: 243px;}
+#content .news_list li .news_img img { display: block; width: 100%; height: 100%;}
+
+#content .news_list dl { padding: 0 50px; width: 1000px;}
+#content .news_list li dl dt { font-size: 2rem; padding-bottom: 10px; font-weight: 700; display: block;  transition: all 0.5s;}
+#content .news_list dl dd { font-size: 1.8rem;  }
+#content .news_list dl dd span { font-size: 1.5rem; color: #999; padding-top: 30px; display: block ;}
+
+@media(max-width:1450px) {
+    #content .news_list li {  flex-wrap: nowrap;}
+    #content .news_list dl { padding: 0 30px;}
+    #content .news_list li dl dt { font-size: 1.8rem;}
+    #content .news_list dl dd { font-size: 1.5rem;}
+}
+
+@media(max-width:1200px) {
+    #content {padding: 100px 5%;}
+    #content .search .inner {padding: 0;}
+}
+
+@media(max-width:768px) {
+    #content {padding: 50px 5%;}
+    input[type="text"] {padding: 0;}
+    #content .news_list li {  flex-wrap: wrap;}
+    #content .news_list li .news_img { width: 100%;}
+    #content .news_list dl { padding: 20px 0 0;}
+    #content .news_list dl dd span { font-size: 1.4rem; padding-top: 10px;}
+    .page .num::after { width: 25px; height: 25px;}
+    .page .num a {padding: 0 25px;  }
+}

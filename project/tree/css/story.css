@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+#header{border-bottom: 1px solid #ccc;}
+/* 서브페이지 상단 사이트맵 공통 부분 시작 */
+/* 서브 mv 영역 */
+#container { position: relative;}
+#container .sub_visual h2 { color: #fff; font-size: 5rem; text-align: center; position: absolute; left: 50%; top: 60%; transform: translate(-50%,-50%);}
+#container .sub_visual {height: 460px; width: 100%;  position: relative; backdrop-filter: brightness(30%); }
+#container .sub_visual .sv_bg { filter: brightness(50%); height: 100%;}
+#container .sub_visual img { object-fit: cover; width: 100%; height: 100%; display: block;}
+
+/* sub btn 영역 */
+.bread_wrap {  position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 1300px; height: 74px; background: #fff; z-index: 99;}
+.bread_btn { display: flex;  padding-top: 25px; text-align: center; align-items: center; position: relative;}
+.bread_btn > div { border-right: 1px solid #eee; padding-left: 15px;}
+.bread_btn > div:last-child { border: none;}
+.bread_btn button i { font-size: 2rem;}
+.bread_btn button { display: inline-block;  font-size: 1.7rem; color: #333; background: #fff; cursor: pointer; border: none;  font-family:var(--mainFont);}
+.bread_btn .btn1 { width: 80px; }
+.bread_btn .btn2 { display: flex; justify-content: space-between; width: 250px; padding-right: 30px; position: relative; }
+.bread_btn .btn2 i { font-size: 1.3rem;}
+.bread_btn .btn3 { display: flex; justify-content: space-between; width: 250px; position: relative;}
+.bread_btn .btn3 i { font-size: 1.3rem;  }
+.bread_btn i.active::before {transform: rotate(180deg);}
+
+/* sub gnb 영역 */
+.bread_gnb1 { position: absolute; left: 0; top: 45px; width: 100%; border: 1px solid #eee; padding: 10px 15px; background: #fff;}
+.bread_gnb1 > li > a { display: block; background: #fff;  text-align: left; padding: 5px 0; transition: all 0.3s; color: #888888;}
+.bread_gnb1 > li > a:hover { color: var(--mainColor); font-weight: 600;}
+
+.bread_gnb2 { position: absolute; left: 0; top: 45px; width: 100%; border: 1px solid #eee; padding: 10px 15px; background: #fff;}
+.bread_gnb2 > li > a { display: block; background: #fff;  text-align: left; padding: 5px 0; transition: all 0.3s; color: #888888;}
+.bread_gnb2 > li > a:hover { color: var(--mainColor); font-weight: 600;}
+
+
+
+@media (max-width:1400px) {
+    .bread_wrap { width: 100%;}
+    #container .sub_visual h2 { font-size: 4rem;}
+}
+
+@media (max-width:1030px) {
+    .bread_btn {padding-top: 20px;}
+    .bread_wrap { height: 60px;}
+    .bread_btn .btn1 { display: none;}  
+    .bread_btn .btn2 { width: calc(100%/2);}
+    .bread_btn .btn3 { width: calc(100%/2); padding-right: 20px;}
+    .bread_gnb1 { top: 35px; font-size: 1.5rem;}
+    .bread_gnb2 { top: 35px; font-size: 1.5rem;}
+    .bread_btn button { font-size: 1.5rem;}
+}
+
+
+/* 서브페이지 상단 사이트맵 공통 부분 종료 */
+
+.inner{max-width: 1700px; margin: 0 auto; padding: 0 5%;}
+body { font-size: 1.5rem; color: #333; line-height: 1.5; font-family:'pretendard',sans-serif; overflow-x: hidden;}
+
+/* title */
+#history .inner .history_title h2{text-align: center; font-size: 6.0rem; padding: 100px 0;}
+
+/* line+circle */
+
+.history_con span{color:#004E81}
+
+
+.history_con img{object-fit: cover; width: 100%; height: auto; display: block;}
+
+.history::after{content:''; width: 1px; height: 100%; background: rgba(0,78,129,0.5); position: absolute;  left: 50%;}
+.history:nth-child(1):after{height: 665px;}
+.history:nth-child(2):after{height: 892.5px;}
+.history:nth-child(3):after{height: 892.5px;}
+.history:nth-child(4):after{height: 705px;}
+.history:nth-child(5)::after{height: 500px;}
+.history::before{content: ''; width: 10px; height: 10px; background: #004E81; border-radius: 50%; position: absolute; left: 49.8%;}
+
+.history:nth-child(1){width:100%; display: flex; justify-content:center; gap: 10%; margin-bottom: 300px; background: url('../images/sub/company/2024.png') no-repeat 85% -40px;}
+.history:nth-child(2){width:100%; display: flex; justify-content:center; gap: 10%; margin-bottom: 300px; background: url('../images/sub/company/2023.png') no-repeat 85% -40px;}
+.history:nth-child(3){width:100%; display: flex; justify-content:center; gap: 10%; margin-bottom: 300px; background: url('../images/sub/company/2022.png') no-repeat 85% 0px;}
+.history:nth-child(4){width:100%; display: flex; justify-content:center; gap: 10%; margin-bottom: 300px; background: url('../images/sub/company/2021.png') no-repeat 85% 0px;}
+.history:nth-child(5){width:100%; display: flex; justify-content:center; gap: 10%; margin-bottom: 300px; background: url('../images/sub/company/2020.png') no-repeat 85% 0px;}
+.history .txt{width: 600px; margin-left: 100px}
+.history .txt h3{color: #000; font-size: 5.0rem;}
+.history .txt .list li{margin: 15px 0;}
+
+@media(max-width: 1400px){
+    .history {align-items: center; background: none;}
+    .history.txt{margin-top: 0px;}
+    .history:nth-child(1):after{height: 600px; position: absolute; top: 700px;}
+.history:nth-child(2):after{height: 892.5px;}
+.history:nth-child(3):after{height: 892.5px;}
+.history:nth-child(4):after{height: 705px;}
+.history:nth-child(5)::after{height: 800px; position: absolute; }
+}
+
+@media(max-width: 768px){
+    #history .inner .history_title h2{font-size: 3.0rem ;padding: 50px 0 50px 0}
+    .history::after{display: none;}
+    .history::before{display: none;}
+    .inner{padding: 0 10%;}
+    .line{display:none;}
+    .history{ flex-wrap: wrap; margin-bottom: 0px}
+    .history:nth-child(1){margin-bottom:100px;}
+    .history:nth-child(2){margin-bottom:100px;}
+    .history:nth-child(3){margin-bottom:100px;}
+    .history:nth-child(4){margin-bottom:100px;}
+    .history:nth-child(5){margin-bottom:100px;}
+    .history .txt{margin-left:0; padding-top: 50px;}
+    .history .txt .list li{margin: 5px 0; font-size: 1.5rem;}
+}

@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+.inner {max-width: 1700px; padding: 0 5%;}
+
+
+
+#case_detail {padding: 150px 0 0px;}
+#case_detail .txt { display: flex; flex-wrap: wrap; justify-content: center; } 
+#case_detail .txt .txt_box {padding: 0 90px;}
+#case_detail .txt .txt_box:not(:nth-child(1)) {position: relative;}
+#case_detail .txt .txt_box:not(:nth-child(1))::after {content: ""; display: block; width: 1px;height: 100px; background: #ddd; position: absolute; top: 0; left: 0; }
+
+#case_detail .txt .txt_box h3 {font-size: 2rem; font-weight: 600;}
+#case_detail .txt .txt_box p {padding: 20px 0 0px; font-weight: 200;}
+#case_detail .txt .txt_box ul {padding: 20px 10px 0;}
+#case_detail .txt .txt_box ul li {position: relative;  padding: 7px 0; font-weight: 200; }
+#case_detail .txt .txt_box ul li::after {content: ""; position: absolute; top: 50%;left: -10px; display: block; width: 3px;height: 3px;border-radius: 50%; background: #333; transform: translateY(-50%);}
+
+@media(max-width:1200px) {
+    #case_detail {padding: 100px 0;}
+    #case_detail .txt .txt_box {width: 51%; text-align: center;}
+    #case_detail .txt .txt_box:not(:nth-child(1))::after  {display: none;}
+    #case_detail .txt .txt_box:nth-of-type(2) {padding: 50px 0;}
+    #case_detail .txt .txt_box ul li::after  {display: none;}
+    #case_detail .txt .txt_box p {padding: 10px 0 0px; font-weight: 200;}
+    #case_detail .txt .txt_box ul {padding: 10px 0;}
+    
+    #case_detail .txt .txt_box:nth-child(1)  {border-bottom: 1px #ddd solid; }
+    #case_detail .txt .txt_box:nth-child(2)  {border-bottom: 1px #ddd solid; }
+    #case_detail .txt .txt_box {padding: 30px 0;}
+    #case_detail .txt .txt_box:nth-of-type(2) {padding: 30px 0;}
+
+    #case_detail .txt .txt_box ul li {font-size: 1.4rem; padding: 5px 0 ;}
+    #case_detail .txt .txt_box:nth-of-type(2) {padding: 20px 0;}
+}
+@media(max-width:768px){
+    #case_detail {padding: 80px 0;}
+
+    #case_detail .txt .txt_box h3 {font-size: 1.6rem;} 
+    #case_detail .txt .txt_box p {font-size: 1.4rem;  }
+   
+}
+
+#request .inner {display: flex; flex-wrap: wrap; gap: 100px; flex-wrap: wrap; justify-content: center; padding: 100px 5% 0; align-items: center; max-width: 1600px;}
+#request .request_left {width: calc((100% - 100px) / 2);}
+#request .request_left h2 {font-weight: 400; font-size: 4rem;}
+#request .request_left .request_img {padding: 40px 0;}
+#request .request_left .request_img  img {display: block; width: 100%; height: 300px; }
+
+#request .request_left dl dt {font-size: 1.8rem; font-weight: 500; padding: 0 0 20px; letter-spacing: -1px;}
+#request .request_left dl dd {font-size: 1.6rem; font-weight: 200; padding: 0 0 0 10px; position: relative; letter-spacing: -1px;} 
+#request .request_left dl dd::after {content: ""; display: block; width: 3px;height: 3px; background: #333; border-radius: 50%;top: 50%; left: -0px ; transform: translateY(-50%); position: absolute;}
+
+#request ul {padding: 20px 0 0; width: calc((100% - 100px) / 2);}
+#request ul dl{width: 100%; letter-spacing: -1px;}
+#request ul dl dt {font-weight: 500; font-size: 2rem; padding: 30px 0 0 ; position: relative;}
+#request ul dl dt::after {content: ""; display: block; background: #F0E7DB; width: 20px;height: 20px; position: absolute;z-index: -1; top: 50%;left: -10px; transform: translateY(-10%); border-radius: 50%;}
+#request ul dl dd {font-weight: 300; padding: 20px 0 30px; border-bottom: 1px solid #ddd; color: #999; padding-right: 90px;}
+
+
+@media(max-width:1200px) {
+    #request .inner {gap: 50px;}
+    #request .request_left {width: 100%;} 
+    #request ul {width: 100%; padding: 0;}
+    #request .request_left .request_img {padding: 20px 0;}
+
+}
+
+@media(max-width:768px) {
+    #request .inner {padding: 50px 5% 0;}
+    #request .request_left h2 {font-size: 3rem; text-align: center;}
+    #request .request_left dl dt {font-size: 1.6rem; font-weight: 400;}
+    #request .request_left dl dd {font-size: 1.4rem; font-weight: 200;}
+    #request .request_left .request_img  img {height: 200px;}
+    #request .request_left .request_img {padding: 10px 0;}
+
+
+    #request ul dl dt {padding: 20px 0 0; font-size: 1.6rem;}
+    #request ul dl dd {padding: 15px 0 20px; font-size: 1.4rem; padding-right: 20px;}
+    #request ul dl dt::after  {width: 15px;height: 15px; left: -8px;}
+
+}
+
+
+#solution {padding: 150px 0;}
+#solution .inner {max-width: 1200px; }
+#solution h2 {font-weight: 400; font-size: 4rem; padding: 0 0 50px;text-transform: uppercase;}
+#solution ul {display: flex;flex-wrap: wrap;  justify-content: center; text-align: center; padding: 0 0 20px; }
+#solution ul li {width: 45%; border-radius: 10px; padding: 30px 0 ;}
+#solution ul li:nth-of-type(1) {background: #666; color: #fff; font-weight: 200; font-size: 1.6rem; }
+#solution ul li:nth-of-type(2) { width: 10%;  font-size: 3rem; color: #ccc; position: relative;}
+#solution ul li:nth-of-type(2) i {position: absolute; top: 50%;left: 50%; transform: translate(-50%,-50%);}
+#solution ul li:nth-of-type(3) {width: 45%; background: #eee; color: #333; font-weight: 300; font-size: 1.6rem; }
+
+
+@media(max-width:1200px) {
+    #solution {padding: 100px 0;}
+}
+
+@media(max-width:768px) {
+    #solution {padding: 80px 0;}
+    #solution h2 {font-size: 3rem; padding: 0 0 10px; text-align: center;}
+    #solution ul {padding: 0 0 10px;}
+    #solution ul li:nth-of-type(1){padding: 20px 0px; font-size: 1.4rem; width: 100%; margin-bottom: 10px;}
+    #solution ul li:nth-of-type(2) {display: none;}
+    #solution ul li:nth-of-type(3){padding: 20px 0px; font-size: 1.4rem; width: 100%;}
+}
+
+
+#ui {padding: 0 0 150px ;}
+#ui h2 {font-weight: 400; font-size: 4rem; padding: 0 0 50px;}
+#ui .inner ul li img {width: 100%;display: block;}
+#ui .inner {position: relative;}
+.swiper-button-prev::after {display: none;}
+.swiper-button-next::after {display: none;}
+
+.swiper-button-prev i {color: #333; font-size: 4rem;}
+.swiper-button-next i {color: #333; font-size: 4rem;}
+.swiper .swiper-wrapper li.swiper-slide {transform: scale(0.8,0.8); transition: all 0.5s;}
+.swiper .swiper-wrapper li.swiper-slide-active {transform: scale(1,1);}
+
+@media(max-width:1200px) {
+    #ui {padding: 0 0;}
+}
+
+@media(max-width:768px) {
+    #ui {padding: 0 0;}
+    #ui h2 { font-size: 3rem; padding: 0 0 10px; text-align: center;}
+    .swiper-button-prev i {color: #333; font-size: 3rem;}
+.swiper-button-next i {color: #333; font-size: 3rem;}
+}

@@ -1,0 +1,102 @@
+@charset "utf-8";
+::-webkit-scrollbar {width: 8px;height: 3px;background: rgba(0,0,0,0.1);}
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.3); border-radius: 5px; }
+::selection {color: #fff;background: #000;}
+
+body { font-size: 1.5rem; color: #333; line-height: 1.5; font-family:'pretendard',sans-serif; overflow-x: hidden;}
+:root {
+    --mainFont: 'pretendard', sans-serif;
+    --mainColor: #0B1E33;
+}
+
+/* 서브페이지 상단 사이트맵 공통 부분 시작 */
+/* 서브 mv 영역 */
+
+#container { position: relative;}
+#container .sub_visual {height: 460px; width: 100%;  position: relative; backdrop-filter: brightness(30%); }
+#container .sub_visual .sv_bg { filter: brightness(50%); height: 100%;}
+#container .sub_visual img { object-fit: cover; width: 100%; height: 100%; display: block;}
+#container .sub_visual h2 { color: #fff; font-size: 5rem; text-align: center; position: absolute; left: 50%; top: 60%; transform: translate(-50%,-50%); }
+
+/* sub btn 영역 */
+.bread_wrap {  position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 1300px; height: 74px; background: #fff;z-index: 99; }
+.bread_btn { display: flex;  padding-top: 25px; text-align: center; align-items: center; position: relative;}
+.bread_btn > div { border-right: 1px solid #eee; padding-left: 15px;}
+.bread_btn > div:last-child { border: none;}
+.bread_btn button i { font-size: 2rem;}
+.bread_btn button { display: inline-block;  font-size: 1.7rem; color: #333; background: #fff; cursor: pointer; border: none;  font-family:var(--mainFont);}
+.bread_btn .btn1 { width: 80px; }
+.bread_btn .btn2 { cursor: pointer; display: flex; justify-content: space-between; width: 250px; padding-right: 30px; position: relative; z-index: 99; }
+.bread_btn .btn2 i { font-size: 1.3rem;}
+.bread_btn .btn3 { cursor: pointer; display: flex; justify-content: space-between; width: 250px; position: relative;}
+.bread_btn .btn3 i { font-size: 1.3rem;  }
+.bread_btn i.active::before {transform: rotate(180deg);}
+
+/* sub gnb 영역 */
+.bread_gnb1 { position: absolute; left: 0; top: 45px; width: 100%; border: 1px solid #eee; padding: 10px 15px; background: #fff;}
+.bread_gnb1 > li > a { display: block; background: #fff;  text-align: left; padding: 5px 0; transition: all 0.3s; color: #888888;}
+.bread_gnb1 > li > a:hover { color: var(--mainColor); font-weight: 600;}
+
+.bread_gnb2 { position: absolute; left: 0; top: 45px; width: 100%; border: 1px solid #eee; padding: 10px 15px; background: #fff;}
+.bread_gnb2 > li > a { display: block; background: #fff;  text-align: left; padding: 5px 0; transition: all 0.3s; color: #888888;}
+.bread_gnb2 > li > a:hover { color: var(--mainColor); font-weight: 600;}
+
+@media (max-width:1400px) {
+    .bread_wrap { width: 100%;}
+    #container .sub_visual h2 { font-size: 4rem;}
+}
+
+@media (max-width:1030px) {
+    .bread_btn {padding-top: 20px;}
+    .bread_wrap { height: 60px;}
+    .bread_btn .btn1 { display: none;}  
+    .bread_btn .btn2 { width: calc(100%/2);}
+    .bread_btn .btn3 { width: calc(100%/2); padding-right: 20px;}
+    .bread_gnb1 { top: 35px; font-size: 1.5rem;}
+    .bread_gnb2 { top: 35px; font-size: 1.5rem;}
+    .bread_btn button { font-size: 1.5rem;}
+}
+/* 서브페이지 상단 사이트맵 공통 부분 종료 */
+
+
+
+/* 글쓰기 페이지 */
+/* notice */
+#customer { padding: 150px 0;}
+#customer .inner { width: 1200px; padding: 0 5%;}
+
+.writer b { color: red;}
+.writer .form-group { align-items: center; border-bottom: 1px solid #ccc; display: flex; gap: 20px; padding: 20px 40px; font-size: 1.5rem; }
+.writer .form-group:nth-child(1) { border-top: 1px solid #333;}
+
+label { width: 200px; margin-bottom: 5px; font-weight: 600; color: #333; }
+
+
+input[type="text"],
+input[type="password"],
+textarea,
+input[type="file"] { font-family: var(--mainFont); width: 80%; padding: 10px; border: 1px solid #ddd; box-sizing: border-box; color: #333; font-weight: 300; outline: none; }
+
+.writer form input::placeholder { color: #999; font-weight: 300;}
+
+.writer #fileName { box-sizing: border-box; }
+
+.writer #fileUploadButton { font-family: var(--mainFont); font-weight:3200; width: 100px; background:var(--mainColor); color: #ffffff; border: 1px solid #fff; ; padding: 10px; cursor: pointer;}
+
+
+.form-group textarea { height: 200px; padding: 20px; }
+.form-group input[type="file"] { width: 80%; position: relative; }
+.form-group input[type="file"]::file-selector-button { font-family: var(--mainFont); position: absolute; top: 0px; right: -4px; cursor: pointer; height: 100%; padding: 0px 40px; display: block; border: 0px; background: var(--mainColor); color: #fff; }
+
+.writer button[type="submit"] { transform: translate(-50%,0); margin: 5% 0 0 50%;  background: var(--mainColor); color: #ffffff; border: none; padding: 10px 20px; width: 112px; cursor: pointer; text-align: center; font-weight: 500;}
+
+@media (max-width:1400px){
+    #customer { padding: 80px 0; }
+}
+
+@media (max-width:768px){
+    #customer { padding: 80px 0;}
+    label { width: 80px; }
+    .form-group input[type="file"]::file-selector-button { height: 100%; padding: 0px 10px; }
+    .writer .form-group { padding: 20px; }
+}

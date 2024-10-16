@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+body { font-size: 1.5rem; color: #333; line-height: 1.5; font-family:'pretendard',sans-serif; overflow-x: hidden;}
+::selection {color: #fff;background: #000}
+:root {
+    --mainFont: 'pretendard', sans-serif;
+    --mainColor: #0B1E33;
+}
+
+.solution .inner { width: 1700px; padding: 0 5%;}
+
+
+/* 서브페이지 상단 사이트맵 공통 부분 시작 */
+/* 서브 mv 영역 */
+#container { position: relative;}
+#container .sub_visual {height: 460px; width: 100%;  position: relative; backdrop-filter: brightness(30%); }
+#container .sub_visual .sv_bg { filter: brightness(50%); height: 100%;}
+#container .sub_visual img { object-fit: cover; width: 100%; height: 100%; display: block;}
+#container .sub_visual h2 { color: #fff; font-size: 5rem; text-align: center; position: absolute; left: 50%; top: 60%; transform: translate(-50%,-50%);}
+
+/* sub btn 영역 */
+.bread_wrap {  position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 1300px; height: 74px; background: #fff;z-index: 99; }
+.bread_btn { display: flex;  padding-top: 25px; text-align: center; align-items: center; position: relative;}
+.bread_btn > div { border-right: 1px solid #eee; padding-left: 15px;}
+.bread_btn > div:last-child { border: none;}
+.bread_btn button i { font-size: 2rem;}
+.bread_btn button { display: inline-block;  font-size: 1.7rem; color: #333; background: #fff; cursor: pointer; border: none;  font-family:var(--mainFont);}
+.bread_btn .btn1 { width: 80px; }
+.bread_btn .btn2 { cursor: pointer; display: flex; justify-content: space-between; width: 250px; padding-right: 30px; position: relative; z-index: 99; }
+.bread_btn .btn2 i { font-size: 1.3rem;}
+.bread_btn .btn3 { cursor: pointer; display: flex; justify-content: space-between; width: 250px; position: relative;}
+.bread_btn .btn3 i { font-size: 1.3rem;  }
+.bread_btn i.active::before {transform: rotate(180deg);}
+
+/* sub gnb 영역 */
+.bread_gnb1 { position: absolute; left: 0; top: 45px; width: 100%; border: 1px solid #eee; padding: 10px 15px; background: #fff; }
+.bread_gnb1 > li > a { display: block; background: #fff;  text-align: left; padding: 5px 0; transition: all 0.3s; color: #888888; font-size: 1.5rem;}
+.bread_gnb1 > li > a:hover { color: var(--mainColor); font-weight: 600;}
+
+.bread_gnb2 {z-index: 5; position: absolute; left: 0; top: 45px; width: 100%; border: 1px solid #eee; padding: 10px 15px; background: #fff;}
+.bread_gnb2 > li > a { display: block; background: #fff;  text-align: left; padding: 5px 0; transition: all 0.3s; color: #888888; font-size: 1.5rem;}
+.bread_gnb2 > li > a:hover { color: var(--mainColor); font-weight: 600;}
+
+@media (max-width:1400px) {
+    .bread_wrap { width: 100%;}
+    #container .sub_visual h2 { font-size: 4rem;}
+}
+
+@media (max-width:1030px) {
+    .bread_btn {padding-top: 20px;}
+    .bread_wrap { height: 60px;}
+    .bread_btn .btn1 { display: none;}  
+    .bread_btn .btn2 { width: calc(100%/2);}
+    .bread_btn .btn3 { width: calc(100%/2); padding-right: 20px;}
+    .bread_gnb1 { top: 35px; font-size: 1.5rem;}
+    .bread_gnb2 { top: 35px; font-size: 1.5rem;}
+    .bread_btn button { font-size: 1.5rem;}
+}
+/* 서브페이지 상단 사이트맵 공통 부분 종료 */
+
+/* solution content 시작 */
+#content { padding: 150px 0;}
+#content .s_txt { text-align: center; position: relative; height: 300px;}
+#content .s_txt h2 { font-size: 5rem; font-weight: 600;}
+#content .s_txt p {width: 730px; font-size: 2rem; padding: 10px 20px; margin: 0 auto;}
+#content .s_txt p::before { display: block; content: ""; width: 1px; height: 80px; background: #ccc; position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%);}
+
+#content .s_img { text-align: center; padding: 50px 0;}
+#content .s_img img { width: 100%; height: 100%; display: block;}
+
+@media (max-width: 1600px) {
+    #content {
+        padding: 150px 5%;
+    }
+}
+
+@media (max-width:768px) {
+    #content .s_txt h2 { font-size: 3rem;}
+    #content .s_txt p { width: 350px; font-size: 1.5rem;}
+    #content .s_img { padding: 20px;}
+    #content .s_txt {height: 250px;}
+}
+
+#content .solution_intro { display: flex; gap: 50px; 
+align-items: flex-start; flex-wrap: wrap;}
+#content .solution_intro h3 { font-size: 4rem; font-weight: 600; line-height: 1.2;}
+#content .solution_intro p { font-size: 2rem; width: 1200px;}
+
+#content .box { display: flex; padding-top: 30px; gap: 10px; flex-wrap: wrap;}
+#content .box li { border: 1px solid #004E81; color: #004E81; padding: 3px 30px; font-size: 1.5rem; font-weight: 300;}
+
+@media (max-width:1600px) {
+    #content .solution_intro { gap: 20px;}
+}
+
+@media (max-width:1200px) {
+    #content {padding: 100px 0;}
+    #content .solution_intro { gap: 10px;}
+    #content .solution_intro h3 { line-height: 1.8;}
+    #content .solution_intro p { font-size: 1.6rem; padding-top: 10px; width: 800px;}
+}
+@media (max-width:768px) {
+    #content .solution_intro { text-align: center; gap: 0;}
+    #content .solution_intro h3 { font-size: 2.5rem; width: 100%;}
+    #content .solution_intro p { width: 100%; font-size: 1.5rem;}
+    #content .box { gap: 5px; justify-content: center;}
+    #content .box li { font-size: 1.3rem; padding: 3px 15px;}
+    
+}
+
+/* solution_icon */
+.solution_icon { display: flex; justify-content: center; text-align: center; gap: 70px; padding: 130px 0 50px; position: relative; flex-wrap: wrap; }
+.solution_icon dl:nth-child(3) dt {padding-left: 30px;}
+.solution_icon::before { content: ''; display: block; width: 100%; height: 1px; background: #ccc; position: absolute; left: 0; top: 65%; }
+.solution_icon dl dd { font-size: 1.8rem; padding-top: 15px;}
+.solution_icon dl span { font-weight: 600;}
+
+@media (max-width:1000px) {
+    .solution_icon { gap: 30px; padding: 80px 0 30px;}
+    .solution_icon::before { display: none;}
+    .solution_icon dl dd { font-size: 1.5rem;}
+}
